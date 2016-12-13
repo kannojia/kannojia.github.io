@@ -1,0 +1,21 @@
+{
+  "name": "querybuilder",
+  "main": [
+    "dist/js/query-builder.js",
+    "dist/css/query-builder.default.css"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0",
+    "bootstrap": ">= 3.1.0",
+    "bootstrap-select" : "^1.6.0",
+    "selectize": "latest",
+    "bootstrap-datepicker": "latest",
+    "sql-parser": "^1.0.0"
+  },
+  "keywords": [
+    "jquery",
+    "query",
+    "builder",
+    "filter"
+  ]
+}

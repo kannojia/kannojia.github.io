@@ -1,0 +1,1719 @@
+{
+  "conditionalRelationships": {
+    "label": "All Clauses",
+    "clauses": {
+      "fundamentalTraits": {
+        "label": "Fundamental Traits",
+        "clauses": {
+          "signupDate": {
+            "label": "Signup Date",
+            "operators": [
+              "less",
+              "greater",
+              "between",
+              "ago",
+              "upto",
+              "ago_interval"
+            ],
+            "input": "text",
+            "type": "date",
+            "placeholder": {
+              "default": "2016-01-01",
+              "between": [
+                "2016-01-01",
+                "2016-12-13"
+              ],
+              "ago": "days ago",
+              "upto": "upto days",
+              "ago_interval": [
+                "From days ago",
+                "To days ago"
+              ]
+            },
+            "popoverText": "Dates are inclusive of this value in case of relative dates."
+          },
+          "demographics": {
+            "label": "Demographics",
+            "clauses": {
+              "gender": {
+                "label": "Gender",
+                "operators": [
+                  "in",
+                  "not_in"
+                ],
+                "input": "select",
+                "multiple": true,
+                "values": [
+                  {
+                    "1": "Male"
+                  },
+                  {
+                    "2": "Female"
+                  },
+                  {
+                    "3": "Unspecified"
+                  }
+                ]
+              },
+              "city": {
+                "label": "City",
+                "operators": [
+                  "in",
+                  "not_in"
+                ],
+                "input": "select",
+                "multiple": true,
+                "values": [
+                  {
+                    "1": "Mumbai"
+                  },
+                  {
+                    "2": "Bangalore"
+                  },
+                  {
+                    "3": "Pune"
+                  },
+                  {
+                    "4": "Delhi-NCR"
+                  },
+                  {
+                    "5": "Hyderabad"
+                  }
+                ]
+              },
+              "age": {
+                "label": "Age",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text"
+              },
+              "relationshipStatus": {
+                "label": "Relationship Status",
+                "operators": [
+                  "in",
+                  "not_in"
+                ],
+                "input": "select",
+                "multiple": true,
+                "values": [
+                  {
+                    "1": "Married"
+                  },
+                  {
+                    "2": "Unmarried"
+                  },
+                  {
+                    "3": "Complicated"
+                  },
+                  {
+                    "4": "Unknown"
+                  }
+                ]
+              },
+              "birthDate": {
+                "label": "Birth Date",
+                "operators": [
+                  "less",
+                  "greater",
+                  "between",
+                  "ago",
+                  "upto",
+                  "ago_interval"
+                ],
+                "input": "text",
+                "type": "date",
+                "placeholder": {
+                  "default": "2016-01-01",
+                  "between": [
+                    "2016-01-01",
+                    "2016-12-13"
+                  ],
+                  "ago": "days ago",
+                  "upto": "upto days",
+                  "ago_interval": [
+                    "From days ago",
+                    "To days ago"
+                  ]
+                }
+              }
+            }
+          },
+          "signupSource": {
+            "label": "Signup Source",
+            "operators": [
+              "in",
+              "not_in"
+            ],
+            "input": "select",
+            "multiple": true,
+            "values": [
+              {
+                "1": "Email"
+              },
+              {
+                "2": "Facebook"
+              },
+              {
+                "3": "Google"
+              }
+            ]
+          },
+          "signupUTM": {
+            "label": "Signup source UTM",
+            "operators": [
+              "like",
+              "not_like"
+            ],
+            "input": "text"
+          }
+        }
+      },
+      "userActivity": {
+        "label": "User Activity",
+        "clauses": {
+          "lastTransactionMade": {
+            "label": "Last Transaction Made",
+            "clauses": {
+              "lastTransactionMadeDate": {
+                "label": "Date",
+                "operators": [
+                  "less",
+                  "greater",
+                  "between",
+                  "ago",
+                  "upto",
+                  "ago_interval"
+                ],
+                "input": "text",
+                "type": "date",
+                "placeholder": {
+                  "default": "2016-01-01",
+                  "between": [
+                    "2016-01-01",
+                    "2016-12-13"
+                  ],
+                  "ago": "days ago",
+                  "upto": "upto days",
+                  "ago_interval": [
+                    "From days ago",
+                    "To days ago"
+                  ]
+                }
+              },
+              "cashbackAmount": {
+                "label": "Cashback Amount",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text"
+              },
+              "byMerchant": {
+                "label": "By Merchant",
+                "clauses": {
+                  "byMerchantName": {
+                    "label": "Merchant Name",
+                    "operators": [
+                      "in",
+                      "not_in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Paytm"
+                      },
+                      {
+                        "1": "Freecharge"
+                      },
+                      {
+                        "2": "Flipkart"
+                      },
+                      {
+                        "3": "Amazon"
+                      },
+                      {
+                        "4": "Shopclues"
+                      },
+                      {
+                        "5": "Jabong"
+                      },
+                      {
+                        "6": "Lenskart"
+                      }
+                    ]
+                  },
+                  "byMerchantCategory": {
+                    "label": "Merchant Category",
+                    "operators": [
+                      "in",
+                      "not_in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Recharge"
+                      },
+                      {
+                        "1": "Food and Dining"
+                      },
+                      {
+                        "2": "Fashion"
+                      },
+                      {
+                        "3": "Travel"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "lastLoginDate": {
+            "label": "Last Login Date",
+            "operators": [
+              "less",
+              "greater",
+              "between",
+              "ago",
+              "upto",
+              "ago_interval"
+            ],
+            "input": "text",
+            "type": "date",
+            "placeholder": {
+              "default": "2016-01-01",
+              "between": [
+                "2016-01-01",
+                "2016-12-13"
+              ],
+              "ago": "days ago",
+              "upto": "upto days",
+              "ago_interval": [
+                "From days ago",
+                "To days ago"
+              ]
+            }
+          },
+          "referrals": {
+            "label": "Referrals",
+            "clauses": {
+              "noOfReferralsMade": {
+                "label": "Number of referrals made",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "noOfActiveReferee": {
+                "label": "Number of Active Referee",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "lastReferralMadeDate": {
+                "label": "Last referral made date",
+                "operators": [
+                  "less",
+                  "greater",
+                  "between",
+                  "ago",
+                  "upto",
+                  "ago_interval"
+                ],
+                "input": "text",
+                "type": "date",
+                "placeholder": {
+                  "default": "2016-01-01",
+                  "between": [
+                    "2016-01-01",
+                    "2016-12-13"
+                  ],
+                  "ago": "days ago",
+                  "upto": "upto days",
+                  "ago_interval": [
+                    "From days ago",
+                    "To days ago"
+                  ]
+                }
+              }
+            }
+          },
+          "shoppingActivity": {
+            "label": "Shopping Activity",
+            "clauses": {
+              "clickoutsShoppingActivity": {
+                "label": "Clickouts",
+                "clauseText": "Number of Clickouts",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "clickoutsByMerchantName": {
+                "label": "Clickouts By Merchant Name",
+                "clauseText": "Number of Clickouts",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "merchantName": {
+                    "label": "By Merchant",
+                    "operators": [
+                      "in",
+                      "not_in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Paytm"
+                      },
+                      {
+                        "1": "Freecharge"
+                      },
+                      {
+                        "2": "Flipkart"
+                      },
+                      {
+                        "3": "Amazon"
+                      },
+                      {
+                        "4": "Shopclues"
+                      },
+                      {
+                        "5": "Jabong"
+                      },
+                      {
+                        "6": "Lenskart"
+                      }
+                    ]
+                  },
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "clickoutsByCategory": {
+                "label": "Clickouts By Category",
+                "clauseText": "Number of clickouts",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "fromCategory": {
+                    "label": "From category",
+                    "operators": [
+                      "in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Recharge"
+                      },
+                      {
+                        "1": "Food and Dining"
+                      },
+                      {
+                        "2": "Fashion"
+                      },
+                      {
+                        "3": "Travel"
+                      }
+                    ]
+                  },
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "transactionShoppingActivity": {
+                "label": "Transactions",
+                "clauseText": "Number of Transactions",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "transactionByMerchantName": {
+                "label": "Transaction By Merchant Name",
+                "clauseText": "Transcation amount",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "merchantName": {
+                    "label": "From Merchant",
+                    "operators": [
+                      "in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Paytm"
+                      },
+                      {
+                        "1": "Freecharge"
+                      },
+                      {
+                        "2": "Flipkart"
+                      },
+                      {
+                        "3": "Amazon"
+                      },
+                      {
+                        "4": "Shopclues"
+                      },
+                      {
+                        "5": "Jabong"
+                      },
+                      {
+                        "6": "Lenskart"
+                      }
+                    ]
+                  },
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "transactionByCategory": {
+                "label": "Transaction By Category",
+                "clauseText": "Transaction amount",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "Category": {
+                    "label": "From Category",
+                    "operators": [
+                      "in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Recharge"
+                      },
+                      {
+                        "1": "Food and Dining"
+                      },
+                      {
+                        "2": "Fashion"
+                      },
+                      {
+                        "3": "Travel"
+                      }
+                    ]
+                  },
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "browsingActivity": {
+            "label": "Browsing Activity",
+            "clauses": {
+              "pageViews": {
+                "label": "PageViews",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "pageViewsByMerchantName": {
+                "label": "PageViews By Merchant Name",
+                "clauseText": "Number of Pageviews",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "merchantName": {
+                    "label": "From Merchant",
+                    "operators": [
+                      "in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Paytm"
+                      },
+                      {
+                        "1": "Freecharge"
+                      },
+                      {
+                        "2": "Flipkart"
+                      },
+                      {
+                        "3": "Amazon"
+                      },
+                      {
+                        "4": "Shopclues"
+                      },
+                      {
+                        "5": "Jabong"
+                      },
+                      {
+                        "6": "Lenskart"
+                      }
+                    ]
+                  },
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "pageViewsByCategory": {
+                "label": "PageViews By Category",
+                "clauseText": "Number of pageViews",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "category": {
+                    "label": "From Category",
+                    "operators": [
+                      "in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Recharge"
+                      },
+                      {
+                        "1": "Food and Dining"
+                      },
+                      {
+                        "2": "Fashion"
+                      },
+                      {
+                        "3": "Travel"
+                      }
+                    ]
+                  },
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "cashbackDetails": {
+            "label": "Cashback Details",
+            "clauses": {
+              "cashbackDetailsByMerchant": {
+                "label": "Cashback by Merchant",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "merchantName": {
+                    "label": "Merchant Name",
+                    "operators": [
+                      "in",
+                      "not_in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Paytm"
+                      },
+                      {
+                        "1": "Freecharge"
+                      },
+                      {
+                        "2": "Flipkart"
+                      },
+                      {
+                        "3": "Amazon"
+                      },
+                      {
+                        "4": "Shopclues"
+                      },
+                      {
+                        "5": "Jabong"
+                      },
+                      {
+                        "6": "Lenskart"
+                      }
+                    ]
+                  },
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "byAccountBalances": {
+                "label": "By Account Balances",
+                "clauses": {
+                  "accountBalanceStatus": {
+                    "label": "Account Balance",
+                    "operators": [
+                      "equal"
+                    ],
+                    "input": "select",
+                    "values": [
+                      {
+                        "pending": "Pending"
+                      },
+                      {
+                        "withdrawn": "Withdrawn"
+                      },
+                      {
+                        "withdrawlInProcess": "Withdrawl-in-process"
+                      },
+                      {
+                        "available": "Available"
+                      },
+                      {
+                        "transactionsTotal": "Transactions Total"
+                      },
+                      {
+                        "promotionsTotal": "Promotions Total"
+                      },
+                      {
+                        "referralsTotal": "Referrals Total"
+                      }
+                    ],
+                    "dependency": {
+                      "accountBalance": {
+                        "label": "Balance is",
+                        "operators": [
+                          "less",
+                          "less_or_equal",
+                          "greater",
+                          "greater_or_equal",
+                          "between"
+                        ],
+                        "input": "text"
+                      }
+                    }
+                  }
+                }
+              },
+              "avgTransactionCashback": {
+                "label": "Average Transaction Cashback",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text"
+              }
+            }
+          }
+        }
+      },
+      "viewedContent": {
+        "label": "Viewed Content",
+        "clauses": {
+          "selectPromotions": {
+            "label": "Select Promotion",
+            "clauseText": "Promotion Tag",
+            "operators": [
+              "equal"
+            ],
+            "input": "select",
+            "values": [
+              {
+                "1": "Tag 1"
+              },
+              {
+                "2": "Tag 2"
+              },
+              {
+                "3": "Tag 3"
+              },
+              {
+                "4": "Tag 4"
+              }
+            ],
+            "dependency": {
+              "promotionTitle": {
+                "label": "Promotion Title",
+                "operators": [
+                  "in",
+                  "not_in"
+                ],
+                "input": "select",
+                "multiple": true,
+                "values": [
+                  {
+                    "1": "Title 1"
+                  },
+                  {
+                    "2": "Title 2"
+                  },
+                  {
+                    "3": "Title 3"
+                  },
+                  {
+                    "4": "Title 4"
+                  }
+                ]
+              },
+              "date": {
+                "label": "Date",
+                "operators": [
+                  "less",
+                  "greater",
+                  "between",
+                  "ago",
+                  "upto",
+                  "ago_interval"
+                ],
+                "input": "text",
+                "type": "date",
+                "placeholder": {
+                  "default": "2016-01-01",
+                  "between": [
+                    "2016-01-01",
+                    "2016-12-13"
+                  ],
+                  "ago": "days ago",
+                  "upto": "upto days",
+                  "ago_interval": [
+                    "From days ago",
+                    "To days ago"
+                  ]
+                }
+              }
+            }
+          },
+          "selectWorkflows": {
+            "label": "Select General Workflow",
+            "clauseText": "Workflow Title",
+            "operators": [
+              "in",
+              "not_in"
+            ],
+            "input": "select",
+            "multiple": true,
+            "values": [
+              {
+                "1": "Title 1"
+              },
+              {
+                "2": "Title 2"
+              },
+              {
+                "3": "Title 3"
+              },
+              {
+                "4": "Title 4"
+              }
+            ],
+            "dependency": {
+              "date": {
+                "label": "Date",
+                "operators": [
+                  "less",
+                  "greater",
+                  "between",
+                  "ago",
+                  "upto",
+                  "ago_interval"
+                ],
+                "input": "text",
+                "type": "date",
+                "placeholder": {
+                  "default": "2016-01-01",
+                  "between": [
+                    "2016-01-01",
+                    "2016-12-13"
+                  ],
+                  "ago": "days ago",
+                  "upto": "upto days",
+                  "ago_interval": [
+                    "From days ago",
+                    "To days ago"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "subscriptionAndEmailActivity": {
+        "label": "Subscription And Email Activity",
+        "clauses": {
+          "isSubscribedToNewsletter": {
+            "label": "Is subscribed to Newsletter ? ",
+            "operators": [
+              "equal",
+              "not_equal"
+            ],
+            "input": "select",
+            "values": [
+              {
+                "yes": "Yes"
+              },
+              {
+                "no": "No"
+              }
+            ]
+          },
+          "isSubscribedToAlerts": {
+            "label": "Subscribed to Alerts for Merchants ",
+            "operators": [
+              "in",
+              "not_in"
+            ],
+            "input": "select",
+            "multiple": true,
+            "values": [
+              {
+                "0": "Paytm"
+              },
+              {
+                "1": "Freecharge"
+              },
+              {
+                "2": "Flipkart"
+              },
+              {
+                "3": "Amazon"
+              },
+              {
+                "4": "Shopclues"
+              },
+              {
+                "5": "Jabong"
+              },
+              {
+                "6": "Lenskart"
+              }
+            ]
+          },
+          "emailNewsletterTemplateType": {
+            "label": "Email/Newsletter Activity",
+            "clauses": {
+              "byLatestOpenDate": {
+                "label": "By Latest Open Date",
+                "operators": [
+                  "less",
+                  "greater",
+                  "between",
+                  "ago",
+                  "ago_interval"
+                ],
+                "input": "text",
+                "type": "date",
+                "placeholder": {
+                  "default": "2016-01-01",
+                  "between": [
+                    "2016-01-01",
+                    "2016-12-13"
+                  ],
+                  "ago": "days ago",
+                  "upto": "upto days",
+                  "ago_interval": [
+                    "From days ago",
+                    "To days ago"
+                  ]
+                },
+                "dependency": {
+                  "emailNewsletterTemplate": {
+                    "label": "Type",
+                    "operators": [
+                      "in",
+                      "not_in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Directly coded emails"
+                      },
+                      {
+                        "1": "Promotions"
+                      },
+                      {
+                        "2": "Newsletters"
+                      },
+                      {
+                        "3": "Coupon Alerts"
+                      },
+                      {
+                        "4": "Transactional Alerts"
+                      }
+                    ]
+                  }
+                }
+              },
+              "byLatestClickDate": {
+                "label": "By Latest Click Date",
+                "operators": [
+                  "less",
+                  "greater",
+                  "between",
+                  "ago",
+                  "upto",
+                  "ago_interval"
+                ],
+                "input": "text",
+                "type": "date",
+                "placeholder": {
+                  "default": "2016-01-01",
+                  "between": [
+                    "2016-01-01",
+                    "2016-12-13"
+                  ],
+                  "ago": "days ago",
+                  "upto": "upto days",
+                  "ago_interval": [
+                    "From days ago",
+                    "To days ago"
+                  ]
+                },
+                "dependency": {
+                  "emailNewsletterTemplate": {
+                    "label": "Type",
+                    "operators": [
+                      "in",
+                      "not_in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Directly coded emails"
+                      },
+                      {
+                        "1": "Promotions"
+                      },
+                      {
+                        "2": "Newsletters"
+                      },
+                      {
+                        "3": "Coupon Alerts"
+                      },
+                      {
+                        "4": "Transactional Alerts"
+                      }
+                    ]
+                  }
+                }
+              },
+              "byTotalNoOfOpens": {
+                "label": "By Total Number of opens",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "emailNewsletterTemplate": {
+                    "label": "Type",
+                    "operators": [
+                      "in",
+                      "not_in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Directly coded emails"
+                      },
+                      {
+                        "1": "Promotions"
+                      },
+                      {
+                        "2": "Newsletters"
+                      },
+                      {
+                        "3": "Coupon Alerts"
+                      },
+                      {
+                        "4": "Transactional Alerts"
+                      }
+                    ]
+                  },
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              },
+              "byTotalNoOfClicks": {
+                "label": "By Total Number of Clicks",
+                "operators": [
+                  "less",
+                  "less_or_equal",
+                  "greater",
+                  "greater_or_equal",
+                  "between"
+                ],
+                "input": "text",
+                "dependency": {
+                  "emailNewsletterTemplate": {
+                    "label": "Type",
+                    "operators": [
+                      "in",
+                      "not_in"
+                    ],
+                    "input": "select",
+                    "multiple": true,
+                    "values": [
+                      {
+                        "0": "Directly coded emails"
+                      },
+                      {
+                        "1": "Promotions"
+                      },
+                      {
+                        "2": "Newsletters"
+                      },
+                      {
+                        "3": "Coupon Alerts"
+                      },
+                      {
+                        "4": "Transactional Alerts"
+                      }
+                    ]
+                  },
+                  "date": {
+                    "label": "Date",
+                    "operators": [
+                      "less",
+                      "greater",
+                      "between",
+                      "ago",
+                      "upto",
+                      "ago_interval"
+                    ],
+                    "input": "text",
+                    "type": "date",
+                    "placeholder": {
+                      "default": "2016-01-01",
+                      "between": [
+                        "2016-01-01",
+                        "2016-12-13"
+                      ],
+                      "ago": "days ago",
+                      "upto": "upto days",
+                      "ago_interval": [
+                        "From days ago",
+                        "To days ago"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "customerSupport": {
+        "label": "Customer Support",
+        "clauses": {
+          "ticketsRaised": {
+            "label": "Ticket Type",
+            "operators": [
+              "in",
+              "not_in"
+            ],
+            "input": "select",
+            "multiple": true,
+            "values": [
+              {
+                "NotTracked": "Not Tracked"
+              },
+              {
+                "AmountIncorrect": "Amount Incorrect"
+              },
+              {
+                "Declined": "Declined"
+              },
+              {
+                "Pending": "Pending"
+              }
+            ]
+          },
+          "claimedTickets": {
+            "label": "Claimed Tickets",
+            "operators": [
+              "less",
+              "less_or_equal",
+              "greater",
+              "greater_or_equal",
+              "between"
+            ],
+            "input": "text",
+            "dependency": {
+              "date": {
+                "label": "Date",
+                "operators": [
+                  "less",
+                  "greater",
+                  "between",
+                  "ago",
+                  "upto",
+                  "ago_interval"
+                ],
+                "input": "text",
+                "type": "date"
+              }
+            }
+          }
+        }
+      },
+      "customQuery": {
+        "label": "Custom Query",
+        "input": "text"
+      }
+    }
+  },
+  "operators": {
+    "ago": {
+      "multiple": "false",
+      "name": "From",
+      "nb_inputs": "1",
+      "val": "AGO"
+    },
+    "ago_interval": {
+      "multiple": "false",
+      "name": "Between",
+      "nb_inputs": "2",
+      "val": "INTERVAL"
+    },
+    "begins_with": {
+      "multiple": "false",
+      "name": "Begins With",
+      "nb_inputs": "1",
+      "val": ""
+    },
+    "between": {
+      "multiple": "false",
+      "name": "Between",
+      "nb_inputs": "2",
+      "val": "BETWEEN"
+    },
+    "contains": {
+      "multiple": "false",
+      "name": "Contains",
+      "nb_inputs": "1",
+      "val": ""
+    },
+    "ends_with": {
+      "multiple": "false",
+      "name": "Ends with",
+      "nb_inputs": "1",
+      "val": ""
+    },
+    "equal": {
+      "multiple": "false",
+      "name": "Equal",
+      "nb_inputs": "1",
+      "val": "="
+    },
+    "greater": {
+      "multiple": "false",
+      "name": "Greater than",
+      "nb_inputs": "1",
+      "val": ">"
+    },
+    "greater_or_equal": {
+      "multiple": "false",
+      "name": "Greater than or equal to",
+      "nb_inputs": "1",
+      "val": ">="
+    },
+    "in": {
+      "multiple": "true",
+      "name": "Including",
+      "nb_inputs": "1",
+      "val": "IN"
+    },
+    "is_empty": {
+      "multiple": "false",
+      "name": "Is empty",
+      "nb_inputs": "0",
+      "val": ""
+    },
+    "is_not_empty": {
+      "multiple": "false",
+      "name": "Is Not empty",
+      "nb_inputs": "0",
+      "val": ""
+    },
+    "is_not_null": {
+      "multiple": "false",
+      "name": "Is Not null",
+      "nb_inputs": "0",
+      "val": ""
+    },
+    "is_null": {
+      "multiple": "false",
+      "name": "Is null",
+      "nb_inputs": "0",
+      "val": ""
+    },
+    "less": {
+      "multiple": "false",
+      "name": "Less than",
+      "nb_inputs": "1",
+      "val": "<"
+    },
+    "less_or_equal": {
+      "multiple": "false",
+      "name": "Less than or equal to",
+      "nb_inputs": "1",
+      "val": "<="
+    },
+    "like": {
+      "multiple": "false",
+      "name": "Like",
+      "nb_inputs": "1",
+      "val": "LIKE"
+    },
+    "not_begins_with": {
+      "multiple": "false",
+      "name": "Not begins with",
+      "nb_inputs": "1",
+      "val": ""
+    },
+    "not_between": {
+      "multiple": "false",
+      "name": "Not Between",
+      "nb_inputs": "2",
+      "val": "NOT BETWEEN"
+    },
+    "not_contains": {
+      "multiple": "false",
+      "name": "Not Contains",
+      "nb_inputs": "1",
+      "val": ""
+    },
+    "not_ends_with": {
+      "multiple": "false",
+      "name": "Not ends with",
+      "nb_inputs": "1",
+      "val": ""
+    },
+    "not_equal": {
+      "multiple": "false",
+      "name": "Not Equal",
+      "nb_inputs": "1",
+      "val": "!="
+    },
+    "not_in": {
+      "multiple": "true",
+      "name": "Exculding",
+      "nb_inputs": "1",
+      "val": "NOT IN"
+    },
+    "not_like": {
+      "multiple": "false",
+      "name": "Not Like",
+      "nb_inputs": "1",
+      "val": "NOT LIKE"
+    },
+    "upto": {
+      "multiple": "false",
+      "name": "Upto",
+      "nb_inputs": "1",
+      "val": "UPTO"
+    }
+  }
+}

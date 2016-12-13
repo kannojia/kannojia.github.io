@@ -1,0 +1,152 @@
+{
+  "ago": {
+    "multiple": "false",
+    "name": "From",
+    "nb_inputs": "1",
+    "val": "AGO"
+  },
+  "ago_interval": {
+    "multiple": "false",
+    "name": "Between",
+    "nb_inputs": "2",
+    "val": "INTERVAL"
+  },
+  "begins_with": {
+    "multiple": "false",
+    "name": "Begins With",
+    "nb_inputs": "1",
+    "val": ""
+  },
+  "between": {
+    "multiple": "false",
+    "name": "Between",
+    "nb_inputs": "2",
+    "val": "BETWEEN"
+  },
+  "contains": {
+    "multiple": "false",
+    "name": "Contains",
+    "nb_inputs": "1",
+    "val": ""
+  },
+  "ends_with": {
+    "multiple": "false",
+    "name": "Ends with",
+    "nb_inputs": "1",
+    "val": ""
+  },
+  "equal": {
+    "multiple": "false",
+    "name": "Equal",
+    "nb_inputs": "1",
+    "val": "="
+  },
+  "greater": {
+    "multiple": "false",
+    "name": "Greater than",
+    "nb_inputs": "1",
+    "val": ">"
+  },
+  "greater_or_equal": {
+    "multiple": "false",
+    "name": "Greater than or equal to",
+    "nb_inputs": "1",
+    "val": ">="
+  },
+  "in": {
+    "multiple": "true",
+    "name": "Including",
+    "nb_inputs": "1",
+    "val": "IN"
+  },
+  "is_empty": {
+    "multiple": "false",
+    "name": "Is empty",
+    "nb_inputs": "0",
+    "val": ""
+  },
+  "is_not_empty": {
+    "multiple": "false",
+    "name": "Is Not empty",
+    "nb_inputs": "0",
+    "val": ""
+  },
+  "is_not_null": {
+    "multiple": "false",
+    "name": "Is Not null",
+    "nb_inputs": "0",
+    "val": ""
+  },
+  "is_null": {
+    "multiple": "false",
+    "name": "Is null",
+    "nb_inputs": "0",
+    "val": ""
+  },
+  "less": {
+    "multiple": "false",
+    "name": "Less than",
+    "nb_inputs": "1",
+    "val": "<"
+  },
+  "less_or_equal": {
+    "multiple": "false",
+    "name": "Less than or equal to",
+    "nb_inputs": "1",
+    "val": "<="
+  },
+  "like": {
+    "multiple": "false",
+    "name": "Like",
+    "nb_inputs": "1",
+    "val": "LIKE"
+  },
+  "not_begins_with": {
+    "multiple": "false",
+    "name": "Not begins with",
+    "nb_inputs": "1",
+    "val": ""
+  },
+  "not_between": {
+    "multiple": "false",
+    "name": "Not Between",
+    "nb_inputs": "2",
+    "val": "NOT BETWEEN"
+  },
+  "not_contains": {
+    "multiple": "false",
+    "name": "Not Contains",
+    "nb_inputs": "1",
+    "val": ""
+  },
+  "not_ends_with": {
+    "multiple": "false",
+    "name": "Not ends with",
+    "nb_inputs": "1",
+    "val": ""
+  },
+  "not_equal": {
+    "multiple": "false",
+    "name": "Not Equal",
+    "nb_inputs": "1",
+    "val": "!="
+  },
+  "not_in": {
+    "multiple": "true",
+    "name": "Exculding",
+    "nb_inputs": "1",
+    "val": "NOT IN"
+  },
+  "not_like": {
+    "multiple": "false",
+    "name": "Not Like",
+    "nb_inputs": "1",
+    "val": "NOT LIKE"
+  },
+  "upto": {
+    "multiple": "false",
+    "name": "Upto",
+    "nb_inputs": "1",
+    "val": "UPTO"
+  }
+}

@@ -1,0 +1,144 @@
+<html lang="en-us"><head>
+    <meta charset="UTF-8">
+    <title>Cayman theme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://pages-themes.github.io/cayman/assets/css/style.css?v=4188d7cda313cde09208de86a019440b06a290a2">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">json-query</h1>
+      <h2 class="project-tagline">A tool which allows to query JSON objects using SQL like query statements</h2>    
+      
+    </section>
+
+    <section class="main-content">
+      
+
+
+<h1 id="header-1header-1"><a href="#header-1"></a>Introduction</h1>
+<p>json-query is a micro tool which you can use to write to query JSON object using SQL like query statements. This tool is still in its infancy.</p>
+
+<p>You can get the script here <a href="jsonQuery/dist/json-query.js">jsonQuery</a>.</p>
+
+<h2 id="header-2header-2"><a href="#header-2"></a>Usage</h2>
+
+<p>Include the script in your page</p> 
+
+<pre>
+<code class="html lang-html">&lt;script src="path/to/script.js"&gt;&lt;/script&gt;
+&lt;!-- Rest of the HTML --&gt;
+</code>
+</pre>
+
+<p>and use it as follows:</p>
+
+<pre><code class="javascript lang-js">var testJSON = [
+  ['name', 'owner', 'species', 'sex', 'birth', 'death'],
+  ["Fluffy", "Harold", "cat", "f", "1993-02-04", null], 
+  ["Claws", "Gwen", "cat", "m", "1994-03-17", null], 
+  ["Buffy", "Harold", "dog", "f", "1989-05-13", null], 
+  ["Fang", "Benny", "dog", "m", "1990-08-27", null], 
+  ["Bowser", "Diane", "dog", "m", "1979-08-31", "1995-07-29"], 
+  ["Chirpy", "Gwen", "bird", "f", "1998-09-11", null], 
+  ["Whistler", "Gwen", "bird", null, "1997-12-09", null], 
+  ["Slim", "Benny", "snake", "m", "1996-04-29", null], 
+  ["Puffball", "Diane", "hamster", "f", "1999-03-30", null]
+];
+
+var results = new jsonQuery(testJSON)
+    .Select(['name', 'owner', 'species', 'sex'])
+    .OrderBy('name', 'ASC')
+    .Execute();
+
+console.log(results);
+
+// [
+//    [ 'Bowser', 'Diane', 'dog', 'm' ],
+//    [ 'Buffy', 'Harold', 'dog', 'f' ],
+//    [ 'Chirpy', 'Gwen', 'bird', 'f' ],
+//    [ 'Claws', 'Gwen', 'cat', 'm' ],
+//    [ 'Fang', 'Benny', 'dog', 'm' ],
+//    [ 'Fluffy', 'Harold', 'cat', 'f' ]
+//    [ 'Puffball', 'Diane', 'hamster', 'f' ],
+//    [ 'Slim', 'Benny', 'snake', 'm' ],
+//    [ 'Whistler', 'Gwen', 'bird', null ]
+// ]
+</code>
+</pre>
+
+<h3>Other examples: </h3> 
+
+<pre><code class="javascript lang-js">var testJSON = [
+  ['name', 'owner', 'species', 'sex', 'birth', 'death'],
+  ["Fluffy", "Harold", "cat", "f", "1993-02-04", null], 
+  ["Claws", "Gwen", "cat", "m", "1994-03-17", null], 
+  ["Buffy", "Harold", "dog", "f", "1989-05-13", null], 
+  ["Fang", "Benny", "dog", "m", "1990-08-27", null], 
+  ["Bowser", "Diane", "dog", "m", "1979-08-31", "1995-07-29"], 
+  ["Chirpy", "Gwen", "bird", "f", "1998-09-11", null], 
+  ["Whistler", "Gwen", "bird", null, "1997-12-09", null], 
+  ["Slim", "Benny", "snake", "m", "1996-04-29", null], 
+  ["Puffball", "Diane", "hamster", "f", "1999-03-30", null]
+];
+
+var results = new jsonQuery(testJSON)
+    .Select(['name', 'owner', 'species'])
+    .Where([
+        ['sex', '=', 'f']
+    ])
+    .OrderBy('name')
+    .Execute();
+
+console.log(results);
+
+// [
+//    [ 'Buffy', 'Harold', 'dog', 'f' ],
+//    [ 'Chirpy', 'Gwen', 'bird', 'f' ],
+//    [ 'Fluffy', 'Harold', 'cat', 'f' ] 
+//    [ 'Puffball', 'Diane', 'hamster', 'f' ],
+//    [ 'Whistler', 'Gwen', 'bird', null ]
+// ]
+</code>
+</pre>
+<br><br>
+<p>You can even write compound where clause by placing 'AND', 'OR' before the clause itself and the following clauses will be evaluated as that.
+To form complex conditionals you can nest conditions in similar fashion.</p> 
+
+<pre><code class="javascript lang-js">var results = new jsonQuery(testJSON)
+    .Select(['name', 'owner', 'species'])
+    .Where([
+        ['OR',
+            ['AND',
+                ['sex', '=', 'f'],
+                ['death', '!=', null]
+            ],
+            ['species', 'IN', ['cat', 'dog']]
+        ]
+    ])
+    .Execute();
+
+console.log(results);
+</code>
+</pre>
+
+<h4>Footnotes: </h4>
+<p> This tool is in very prelimenary stage and therefore might've several bugs. In future support for aggregate functions, group by and other feature
+    will be added.
+</p> 
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/pages-themes/cayman">Page theme : cayman</a> maintained by <a href="https://github.com/pages-themes">pages-themes</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </section>
+
+    
+  
+
+</body></html>

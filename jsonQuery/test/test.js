@@ -16,9 +16,12 @@ var testJSON = [
 var results = new jsonQuery(testJSON)
     .Select(['name', 'owner', 'species', 'sex'])
     .Where([
-        ['AND', 
-            ['death', '=', null],
-            ['sex', '=', 'm']
+        ['OR',
+            ['AND',
+                ['sex', '=', 'f'],
+                ['death', '!=', null]
+            ],
+            ['species', 'IN', ['cat', 'dog']]
         ]
     ])
     .Execute();
